@@ -19,7 +19,7 @@ Ensure that the host machine running this application meets the following requir
     go run main.go
 ```
 ## MQTT Topic
-Publish commands under the topic `tdengine/data/subtable_name`.
+Publish commands under the topic `tdengine/data/subtable_name`in the same broker 
 example topic:
 ```bash
 tdengine/data/d1001
@@ -33,8 +33,8 @@ tdengine/data/d1001
 
 ```
 ## Note
-1 Only data from the subtables d1001, d1002, d1003, d1004 can be queried.
-2 The provided time range should be within the data available in the specified subtables.
+1. Only data from the subtables d1001, d1002, d1003, d1004 can be queried.
+2. The provided time range should be within the data available in the specified subtables.
 ## Exit Gracefully
 To exit the application gracefully, send an interrupt signal (typically `Ctrl+C`). The application waits for ongoing processes to finish before exiting.
 
