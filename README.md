@@ -20,7 +20,6 @@ Ensure that the host machine running this application meets the following requir
 ```
 ## MQTT Topic
 Publish commands under the topic tdengine/data/subtable_name.
-Publish commands under the topic tdengine/data/subtable_name.
 example topic:
 ```bash
 tdengine/data/d1001
