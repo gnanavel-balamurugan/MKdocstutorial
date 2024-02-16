@@ -6,14 +6,20 @@ This application facilitates remote management of containers via MQTT (Message Q
 ## Prerequisites
 Ensure that the host machine running this application meets the following requirements:
 1. Latest versions of Go and Docker are installed.
-2. The `paho mqtt` client is exported using the command:`go get github.com/eclipse/paho.mqtt.golang`
-3. An MQTT Broker is running on port 1883.
+2. The `paho mqtt` client is exported using the command:
+   ```bash
+   go get github.com/eclipse/paho.mqtt.golang
+   ```
+4. An MQTT Broker is running on port 1883.
 
 ## Dependencies
 Refer to the `go.mod` file for a list of dependencies required by the application.
 
 ## Usage
-To start the service, execute the following command: `go run main.go`
+To start the service, execute the following command:
+```bash 
+go run main.go
+```
 
 ## Available Commands
 Publish commands to the topic "remote docker" in the MQTT broker using JSON format. The supported commands are as follows:
@@ -24,19 +30,22 @@ Publish commands to the topic "remote docker" in the MQTT broker using JSON form
 
 ### Command Format
 Publish messages in JSON format to the topic "remote docker" with the following structure:
+```bash
 {
 "Action": "stop_container",
 "ContainerID": "425f2631be05"
 }
+```
 Replace `"stop_container"` with the desired command and provide the appropriate `ContainerID` as needed.
 
 ## Example
 Here's an example of publishing a command to stop a container:
+```bash
 {
 "Action": "stop_container",
 "ContainerID": "425f2631be05"
 }
-
+```
 ## Note
 As of now, only the aforementioned four commands are supported.
 
